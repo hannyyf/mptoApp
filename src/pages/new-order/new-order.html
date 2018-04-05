@@ -1,0 +1,64 @@
+
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>Data Customer</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+        <ion-item>
+          <ion-label stacked>Nama Lengkap</ion-label>
+          <ion-input type="text" [(ngModel)]="order.namaCust"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>Tempat Lahir</ion-label>
+            <ion-input type="text" [(ngModel)]="order.tempatLahir"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>Tanggal Lahir</ion-label>
+            <ion-datetime displayFormat="DD - MMM - YYYY" [(ngModel)]="order.tanggalLahir"></ion-datetime>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Jenis Kelamin</ion-label>
+          <ion-select [(ngModel)]="order.jenisKelamin">
+            <ion-option value="L">Laki-Laki</ion-option>
+            <ion-option value="P">Perempuan</ion-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Status Pernikahan</ion-label>
+          <ion-select [(ngModel)]="order.statusPernikahan">
+            <ion-option value="single" >Belum Menikah</ion-option>
+            <ion-option value="married">Menikah</ion-option>
+            <ion-option value="divorce">Cerai</ion-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>No Handphone</ion-label>
+          <ion-input type="number"  [(ngModel)]="order.noHp1"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>No Handphone Lain</ion-label>
+          <ion-input type="number" [(ngModel)]="order.noHp2"></ion-input>
+        </ion-item>
+
+      <button ion-button block (click)="goToNewOrderAlamat()">Halaman Berikutnya</button>
+      <button ion-button block (click)="goToHome()">Kembali ke Menu</button>
+  
+    
+      </ion-list>
+  
+</ion-content>

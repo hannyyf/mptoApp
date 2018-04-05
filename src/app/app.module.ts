@@ -8,11 +8,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
-import { LoginPage } from '../pages/login/login'
+import { LoginPage } from '../pages/login/login';
+import { NewOrderPage } from '../pages/new-order/new-order';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
+import { OrderServiceProvider } from '../providers/order-service/order-service';
 
 Pro.init('a70e6ba7', {
   appVersion: '1.0'
@@ -44,7 +46,8 @@ export class MyErrorHandler implements ErrorHandler {
     MyApp,
     HomePage,
     ListPage,
-    LoginPage
+    LoginPage,
+    NewOrderPage
   ],
   imports: [
     BrowserModule,
@@ -57,14 +60,16 @@ export class MyErrorHandler implements ErrorHandler {
     MyApp,
     HomePage,
     ListPage,
-    LoginPage
+    LoginPage,
+    NewOrderPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     IonicErrorHandler,
     {provide: ErrorHandler, useClass: MyErrorHandler},
-    AuthServiceProvider
+    AuthServiceProvider,
+    OrderServiceProvider
   ]
 })
 export class AppModule {}
