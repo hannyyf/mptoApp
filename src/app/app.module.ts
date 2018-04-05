@@ -11,6 +11,7 @@ import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
 import { NewOrderPage } from '../pages/new-order/new-order';
 import { NewOrderAlamatPage } from '../pages/new-order-alamat/new-order-alamat';
+import { NewOrderStrukturPage } from '../pages/new-order-struktur/new-order-struktur';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -49,7 +50,8 @@ export class MyErrorHandler implements ErrorHandler {
     ListPage,
     LoginPage,
     NewOrderPage,
-    NewOrderAlamatPage
+    NewOrderAlamatPage,
+    NewOrderStrukturPage
   ],
   imports: [
     BrowserModule,
@@ -64,7 +66,8 @@ export class MyErrorHandler implements ErrorHandler {
     ListPage,
     LoginPage,
     NewOrderPage,
-    NewOrderAlamatPage
+    NewOrderAlamatPage,
+    NewOrderStrukturPage
   ],
   providers: [
     StatusBar,

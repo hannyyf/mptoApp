@@ -29,4 +29,17 @@ export class AuthServiceProvider {
 
   }
 
+
+  callServer(url): Promise<any>
+  {
+    let response : Promise<any>;
+    response = this.httpclient.get(url).toPromise().then(responseData => responseData).catch(err=> this.errorDisplay(err));
+    return response;
+  
+  }
+  errorDisplay(error: any): Promise<any>
+  {
+    return Promise.reject(error.message || error);
+  }
+
 }

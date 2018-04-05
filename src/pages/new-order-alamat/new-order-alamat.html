@@ -21,8 +21,8 @@
   <ion-list>
   <form [formGroup]="formCust">
   <ion-item>
-    <ion-label stacked>Alamat</ion-label>
-    <ion-textarea [(ngModel)]="newDataOrder.alamat" formControlName="alamat"></ion-textarea>
+    <ion-label floating>Alamat</ion-label>
+    <ion-textarea [(ngModel)]="newDataOrder.alamat" formControlName="alamat" required></ion-textarea>
   </ion-item>
   <ion-grid>
     <ion-row>
@@ -32,16 +32,16 @@
     </ion-row>
   </ion-grid>
   <ion-item>
-    <ion-label stacked>Kelurahan/Desa</ion-label>
-    <ion-input type="text" [(ngModel)]="newDataOrder.kelurahan" formControlName="desa"></ion-input>
+    <ion-label floating>Kelurahan/Desa</ion-label>
+    <ion-input type="text" [(ngModel)]="newDataOrder.kelurahan" formControlName="desa" required></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label stacked>Kecamatan</ion-label>
-    <ion-input type="text" [(ngModel)]="newDataOrder.kecamatan" formControlName="kecamatan"></ion-input>
+    <ion-label floating>Kecamatan</ion-label>
+    <ion-input type="text" [(ngModel)]="newDataOrder.kecamatan" formControlName="kecamatan" required></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label stacked>Kabupaten</ion-label>
-    <ion-input type="text" [(ngModel)]="newDataOrder.kabupaten" formControlName="kabupaten"></ion-input>
+    <ion-label floating>Kabupaten</ion-label>
+    <ion-input type="text" [(ngModel)]="newDataOrder.kabupaten" formControlName="kabupaten" required></ion-input>
   </ion-item>
   
 

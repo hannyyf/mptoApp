@@ -1,0 +1,57 @@
+<!--
+  Generated template for the NewOrderStrukturPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>Struktur Kredit</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <p *ngIf="submitAttempt" style="color: #ea6153;">Tolong di isi kolom yang masih kosong.</p>
+  <ion-list>
+    <form [formGroup]="formCust">
+    <ion-item>
+      <ion-label>Nama Dealer</ion-label>
+      <ion-select [(ngModel)]="newDataOrder.namadealer" formControlName="dealer" required>
+        <ion-option *ngFor="let dealer of namadealer; let i = index" [value]="dealer"> {{ namadealer[i] }}</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Type Unit</ion-label>
+      <ion-select [(ngModel)]="newDataOrder.namamotor" formControlName="motor" required>
+        <ion-option *ngFor="let dealer of namamotor; let i = index" [value]="motor"> {{ namamotor[i] }}</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Harga OTR</ion-label>
+      <ion-input type="number" [(ngModel)]="newDataOrder.hargaotr" formControlName="otr" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>DP</ion-label>
+      <ion-input type="number" [(ngModel)]="newDataOrder.dp" formControlName="dp" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Angsuran</ion-label>
+      <ion-input type="number" [(ngModel)]="newDataOrder.angsuran" formControlName="angsuran" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>TOP</ion-label>
+      <ion-input type="number" [(ngModel)]="newDataOrder.top" formControlName="top" required></ion-input>
+    </ion-item>
+    <button ion-button block (click)="goToKeteranganPage()" > Halaman Berikutnya</button>
+    <button ion-button block (click)="back()"> Halaman Sebelumnya</button>
+  </form> 
+  </ion-list>
+
+
+</ion-content>

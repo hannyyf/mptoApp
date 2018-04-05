@@ -5,6 +5,7 @@ import { NewOrderPage } from '../new-order/new-order';
 // import { NewOrderStrukturPage } from '../new-order-struktur/new-order-struktur';
 import { DataOrder } from '../../models/order-model';
 import { OrderServiceProvider } from '../../providers/order-service/order-service'
+import { NewOrderStrukturPage } from '../new-order-struktur/new-order-struktur';
 
 /**
  * Generated class for the NewOrderAlamatPage page.
@@ -56,7 +57,7 @@ export class NewOrderAlamatPage {
     this.insertToObject();
     this.orderService.pushItems(this.dataOrder);
     console.log("Cek isi data sebelum postData ke page selanjutnya", this.dataOrder)
-    // this.navCtrl.push(NewOrderStrukturPage);
+    this.navCtrl.push(NewOrderStrukturPage);
   }else {
     console.log("LENGKAPIN DATA DULU");
     let alert = this.alertCtrl.create({
