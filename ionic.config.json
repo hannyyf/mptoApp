@@ -1,0 +1,8 @@
+{
+  "name": "mptoApp",
+  "app_id": "a70e6ba7",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
