@@ -1,6 +1,6 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { IonicPage,NavController, NavParams} from 'ionic-angular';
+import { IonicPage,NavController, NavParams, AlertController} from 'ionic-angular';
 import { NewOrderAlamatPage } from '../new-order-alamat/new-order-alamat';
 import { HomePage } from '../home/home';
 import { DataOrder } from '../../models/order-model'
@@ -29,7 +29,8 @@ export class NewOrderPage {
     public navCtrl: NavController, 
     public navParams: NavParams, 
     public orderService: OrderServiceProvider,
-    public formBuilder: FormBuilder
+    public formBuilder: FormBuilder,
+    public alertCtrl: AlertController
   ) 
     {
       this.order = new DataOrder();
@@ -53,6 +54,12 @@ export class NewOrderPage {
       this.navCtrl.push(NewOrderAlamatPage, this.order);
     }else {
       console.log("LENGKAPIN DATA DULU");
+      let alert = this.alertCtrl.create({
+        title: 'Error',
+        subTitle: 'Ada data yang masih kosong / tidak valid',
+        buttons: ['OK']
+      });
+      alert.present();
     }
     
   }
@@ -63,8 +70,5 @@ export class NewOrderPage {
     this.navCtrl.setRoot(HomePage);
   }
 
-  getUpperCase(text) {
-    return text.toUpperCase();
-  }
   
 }

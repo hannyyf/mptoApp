@@ -1,0 +1,52 @@
+<!--
+  Generated template for the NewOrderAlamatPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>Alamat Customer</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <p *ngIf="submitAttempt" style="color: #ea6153;">Tolong di isi kolom yang masih kosong.</p>
+  <ion-list>
+  <form [formGroup]="formCust">
+  <ion-item>
+    <ion-label stacked>Alamat</ion-label>
+    <ion-textarea [(ngModel)]="newDataOrder.alamat" formControlName="alamat"></ion-textarea>
+  </ion-item>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-3><ion-input type="number" placeholder="RT" [(ngModel)]="newDataOrder.rt" formControlName="rt"></ion-input></ion-col>
+      <ion-col><ion-label fixed>/</ion-label></ion-col>
+      <ion-col><ion-input type="number" placeholder="Rw" [(ngModel)]="newDataOrder.rw" formControlName="rw"></ion-input></ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-item>
+    <ion-label stacked>Kelurahan/Desa</ion-label>
+    <ion-input type="text" [(ngModel)]="newDataOrder.kelurahan" formControlName="desa"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Kecamatan</ion-label>
+    <ion-input type="text" [(ngModel)]="newDataOrder.kecamatan" formControlName="kecamatan"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Kabupaten</ion-label>
+    <ion-input type="text" [(ngModel)]="newDataOrder.kabupaten" formControlName="kabupaten"></ion-input>
+  </ion-item>
+  
+
+<button ion-button block (click)="goToNewOrderStruktur()" > Halaman Berikutnya</button>
+<button ion-button block (click)="backToNewOrder()"> Halaman Sebelumnya</button>
+</form>
+</ion-list>
+</ion-content>
