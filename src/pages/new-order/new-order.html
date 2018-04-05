@@ -12,25 +12,27 @@
 
 
 <ion-content padding>
+    <p *ngIf="submitAttempt" style="color: #ea6153;">Tolong di isi kolom yang masih kosong.</p>
     <ion-list>
+        <form [formGroup]="formCust">
         <ion-item>
-          <ion-label stacked>Nama Lengkap</ion-label>
-          <ion-input type="text" [(ngModel)]="order.namaCust"></ion-input>
+          <ion-label floating>Nama Lengkap</ion-label>
+          <ion-input type="text" [(ngModel)]="order.namaCust" formControlName="nama" (ionChange)="getUpperCase(order.namaCust)"></ion-input>
         </ion-item>
 
         <ion-item>
-            <ion-label stacked>Tempat Lahir</ion-label>
-            <ion-input type="text" [(ngModel)]="order.tempatLahir"></ion-input>
+            <ion-label floating>Tempat Lahir</ion-label>
+            <ion-input type="text" [(ngModel)]="order.tempatLahir" formControlName="pob"></ion-input>
         </ion-item>
 
         <ion-item>
-            <ion-label stacked>Tanggal Lahir</ion-label>
-            <ion-datetime displayFormat="DD - MMM - YYYY" [(ngModel)]="order.tanggalLahir"></ion-datetime>
+            <ion-label floating>Tanggal Lahir</ion-label>
+            <ion-datetime displayFormat="DD - MMM - YYYY" [(ngModel)]="order.tanggalLahir" formControlName="dob"></ion-datetime>
         </ion-item>
 
         <ion-item>
           <ion-label>Jenis Kelamin</ion-label>
-          <ion-select [(ngModel)]="order.jenisKelamin">
+          <ion-select [(ngModel)]="order.jenisKelamin" formControlName="jk">
             <ion-option value="L">Laki-Laki</ion-option>
             <ion-option value="P">Perempuan</ion-option>
           </ion-select>
@@ -38,7 +40,7 @@
 
         <ion-item>
           <ion-label>Status Pernikahan</ion-label>
-          <ion-select [(ngModel)]="order.statusPernikahan">
+          <ion-select [(ngModel)]="order.statusPernikahan" formControlName="sp">
             <ion-option value="single" >Belum Menikah</ion-option>
             <ion-option value="married">Menikah</ion-option>
             <ion-option value="divorce">Cerai</ion-option>
@@ -46,19 +48,19 @@
         </ion-item>
 
         <ion-item>
-          <ion-label stacked>No Handphone</ion-label>
-          <ion-input type="number"  [(ngModel)]="order.noHp1"></ion-input>
+          <ion-label floating>No Handphone</ion-label>
+          <ion-input type="number"  [(ngModel)]="order.noHp1" formControlName="nohp"></ion-input>
         </ion-item>
 
         <ion-item>
-          <ion-label stacked>No Handphone Lain</ion-label>
-          <ion-input type="number" [(ngModel)]="order.noHp2"></ion-input>
+          <ion-label floating>No Handphone Lain</ion-label>
+          <ion-input type="number" [(ngModel)]="order.noHp2" formControlName="nohp2"></ion-input>
         </ion-item>
 
       <button ion-button block (click)="goToNewOrderAlamat()">Halaman Berikutnya</button>
       <button ion-button block (click)="goToHome()">Kembali ke Menu</button>
   
-    
+      </form>
       </ion-list>
   
 </ion-content>
