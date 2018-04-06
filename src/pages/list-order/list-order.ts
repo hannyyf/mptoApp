@@ -4,7 +4,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { DataOrder } from '../../models/order-model';
 import { HomePage } from '../home/home';
-// import { ListOrderDetailPage } from '../list-order-detail/list-order-detail';
+import { ListOrderDetailPage } from '../list-order-detail/list-order-detail';
 
 /**
  * Generated class for the ListOrderPage page.
@@ -93,7 +93,7 @@ export class ListOrderPage {
     this.dataOrder = result;
     localStorage.setItem('dataOrder', JSON.stringify(this.dataOrder));  
     console.log("cek hasil data order", this.dataOrder); 
-    // this.navCtrl.push(ListOrderDetailPage,{data: this.dataOrder})      
+    this.navCtrl.push(ListOrderDetailPage,{data: this.dataOrder})      
     });
   }
 

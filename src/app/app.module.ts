@@ -16,7 +16,8 @@ import { NewOrderStrukturPage } from '../pages/new-order-struktur/new-order-stru
 import { NewOrderKeteranganPage } from '../pages/new-order-keterangan/new-order-keterangan';
 import { DistributeOrderPage } from'../pages/distribute-order/distribute-order';
 import { DistributeOrderInputPage } from '../pages/distribute-order-input/distribute-order-input';
-import { ListOrderPage } from '../pages/list-order/list-order'
+import { ListOrderPage } from '../pages/list-order/list-order';
+import { ListOrderDetailPage } from '../pages/list-order-detail/list-order-detail';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -61,7 +62,8 @@ export class MyErrorHandler implements ErrorHandler {
     ContohPage,
     DistributeOrderPage,
     DistributeOrderInputPage,
-    ListOrderPage
+    ListOrderPage,
+    ListOrderDetailPage
   ],
   imports: [
     BrowserModule,
@@ -82,7 +84,8 @@ export class MyErrorHandler implements ErrorHandler {
     ContohPage,
     DistributeOrderPage,
     DistributeOrderInputPage,
-    ListOrderPage
+    ListOrderPage,
+    ListOrderDetailPage
   ],
   providers: [
     StatusBar,

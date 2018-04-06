@@ -11,6 +11,7 @@ import { ContohPage } from '../pages/contoh/contoh';
 import { DistributeOrderPage } from '../pages/distribute-order/distribute-order';
 import { ListOrderPage } from '../pages/list-order/list-order';
 
+
 @Component({
   templateUrl: 'app.html'
 })

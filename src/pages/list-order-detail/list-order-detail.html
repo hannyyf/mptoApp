@@ -1,0 +1,35 @@
+<!--
+  Generated template for the ListOrderDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>List Order Detail</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+      <div class="row gr responsive-sm">
+        <div class="col"> No</div>
+        <div class="col"> No. Aplikasi</div>
+        <div class="col"> Nama Customer</div>
+      </div>
+    
+      <div class="row gr responsive-sm" *ngFor="let item of dataOrder; let i=index">
+        <div class="col"> {{i+1}}</div> 
+        <div class="col"> {{ dataOrder[i].idorder }}</div>
+        <div class="col"> {{ dataOrder[i].namacust }}</div>
+      </div>
+    
+    
+      <button ion-button block (click)="back()"> Halaman Sebelumnya</button>
+
+</ion-content>
