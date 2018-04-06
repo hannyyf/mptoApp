@@ -9,6 +9,7 @@ import { LoginPage } from '../pages/login/login';
 import { NewOrderPage } from '../pages/new-order/new-order';
 import { ContohPage } from '../pages/contoh/contoh';
 import { DistributeOrderPage } from '../pages/distribute-order/distribute-order';
+import { ListOrderPage } from '../pages/list-order/list-order';
 
 @Component({
   templateUrl: 'app.html'
@@ -29,7 +30,8 @@ export class MyApp {
       { title: 'List', component: ListPage },
       { title: 'New Order', component: NewOrderPage },
       { title: 'Contoh', component: ContohPage },
-      { title: 'Distribute Order', component: DistributeOrderPage }
+      { title: 'Distribute Order', component: DistributeOrderPage },
+      { title: 'List Order', component: ListOrderPage }
     ];
 
   }
