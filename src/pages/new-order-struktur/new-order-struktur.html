@@ -28,25 +28,25 @@
     </ion-item>
     <ion-item>
       <ion-label>Type Unit</ion-label>
-      <ion-select [(ngModel)]="newDataOrder.namamotor" formControlName="motor" required>
-        <ion-option *ngFor="let dealer of namamotor; let i = index" [value]="motor"> {{ namamotor[i] }}</ion-option>
+      <ion-select [(ngModel)]="newDataOrder.namamotor" formControlName="motor">
+        <ion-option *ngFor="let motor of namamotor; let i = index" [value]="motor"> {{ namamotor[i] }}</ion-option>
       </ion-select>
     </ion-item>
     <ion-item>
       <ion-label floating>Harga OTR</ion-label>
-      <ion-input type="number" [(ngModel)]="newDataOrder.hargaotr" formControlName="otr" required></ion-input>
+      <ion-input type="number" [(ngModel)]="newDataOrder.hargaotr" formControlName="otr"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label floating>DP</ion-label>
-      <ion-input type="number" [(ngModel)]="newDataOrder.dp" formControlName="dp" required></ion-input>
+      <ion-input type="number" [(ngModel)]="newDataOrder.dp" formControlName="dp"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label floating>Angsuran</ion-label>
-      <ion-input type="number" [(ngModel)]="newDataOrder.angsuran" formControlName="angsuran" required></ion-input>
+      <ion-input type="number" [(ngModel)]="newDataOrder.angsuran" formControlName="angsuran"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label floating>TOP</ion-label>
-      <ion-input type="number" [(ngModel)]="newDataOrder.top" formControlName="top" required></ion-input>
+      <ion-input type="number" [(ngModel)]="newDataOrder.top" formControlName="top"></ion-input>
     </ion-item>
     <button ion-button block (click)="goToKeteranganPage()" > Halaman Berikutnya</button>
     <button ion-button block (click)="back()"> Halaman Sebelumnya</button>

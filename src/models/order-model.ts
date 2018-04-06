@@ -27,6 +27,7 @@ export class DataOrder {
     keterangan?: string;
     dtFrom?: any;
     dtThru?: any;
+    jabatan?: any;
 
 
     constructor(){

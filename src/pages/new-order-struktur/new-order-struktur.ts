@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController} from 'ionic-angular';
 import { NewOrderPage } from '../new-order/new-order';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-// import { NewOrderKeteranganPage } from '../new-order-keterangan/new-order-keterangan';
+import { NewOrderKeteranganPage } from '../new-order-keterangan/new-order-keterangan';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { DataOrder } from '../../models/order-model';
 import { OrderServiceProvider } from '../../providers/order-service/order-service'
@@ -62,7 +62,7 @@ export class NewOrderStrukturPage {
     this.insertToObject();
     this.orderService.pushItems(this.dataOrder);
     console.log("Cek isi data sebelum postData ke page selanjutnya", this.dataOrder)
-    // this.navCtrl.push(NewOrderKeteranganPage);
+    this.navCtrl.push(NewOrderKeteranganPage);
   } else {
     console.log("LENGKAPIN DATA DULU");
     let alert = this.alertCtrl.create({
@@ -82,7 +82,7 @@ export class NewOrderStrukturPage {
 
   getDataDealer()
   {
-    let url='http://192.168.43.35/php/page/read_dealer.php';
+    let url='http://localhost/mpto/page/read_dealer.php';
     // let url='http://www.order-is.xyz/php/page/read_dealer.php';
     let serverResponse : Promise<any>;
     serverResponse = this.network.callServer(url);
@@ -90,8 +90,6 @@ export class NewOrderStrukturPage {
      
       console.log("Received dealer" + JSON.stringify(data));
       this.parseJson(data);
-      // this.dealer = data;
-      // console.log("ttttttt", data.dealer)
     }).catch(err =>{
       console.log("Error :" + err );
     })
@@ -99,7 +97,7 @@ export class NewOrderStrukturPage {
 
   getDataMotor()
   {
-    let url='http://192.168.43.35/php/page/read_motor.php';
+    let url='http://localhost/mpto/page/read_motor.php';
     // let url='http://www.order-is.xyz/php/page/read_motor.php';
     let serverResponse : Promise<any>;
     serverResponse = this.network.callServer(url);
@@ -107,8 +105,6 @@ export class NewOrderStrukturPage {
      
       console.log("Received motor" + JSON.stringify(data));
       this.parseJson(data);
-      // this.dealer = data;
-      // console.log("ttttttt", data.dealer)
     }).catch(err =>{
       console.log("Error :" + err );
     })

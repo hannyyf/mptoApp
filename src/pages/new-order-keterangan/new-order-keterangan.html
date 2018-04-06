@@ -1,0 +1,48 @@
+<!--
+  Generated template for the NewOrderKeteranganPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+      <ion-title>Keterangan Tambahan</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+      <ion-list>
+          <ion-item>
+            <ion-label>CS ID</ion-label>
+            <ion-select [(ngModel)]="newDataOrder.namacs">
+              <ion-option *ngFor="let cs of namacs; let i = index" [value]="cs"> {{ namacs[i] }}</ion-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-label>AO ID</ion-label>
+            <ion-select [(ngModel)]="newDataOrder.namaao">
+              <ion-option *ngFor="let ao of namaao; let i = index" [value]="ao"> {{ namaao[i] }}</ion-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+              <ion-label>CA ID</ion-label>
+              <ion-select [(ngModel)]="newDataOrder.namaca">
+                <ion-option *ngFor="let ca of namaca; let i = index" [value]="ca"> {{ namaca[i] }}</ion-option>
+              </ion-select>
+          </ion-item>
+          <ion-item>
+              <ion-label floating>Keterangan Tambahan</ion-label>
+              <ion-textarea [(ngModel)]="newDataOrder.keterangan"></ion-textarea>
+            </ion-item>
+          <button ion-button block (click)="sendDataToServer()"> Submit Data</button>
+          <button ion-button block (click)="goToHomePage()"> Halaman Sebelumnya</button>
+         </ion-list>
+  
+  </ion-content>
+  
