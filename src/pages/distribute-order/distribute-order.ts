@@ -41,6 +41,7 @@ export class DistributeOrderPage {
     goToHomePage()
     {
       this.navCtrl.push(HomePage);
+      this.navCtrl.setRoot(HomePage);
     }
 
     detail(id)

@@ -1,18 +1,56 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Home</ion-title>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>Main Menu</ion-title> 
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+<ion-content class="list-avatar-page">
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+    <!-- <h2>Welcome to {{userDetails.name}}</h2>
+  <h3>Email: {{userDetails.email}}</h3> -->
+      
+    <ion-list>
+    <button ion-item (click)="goToNewOrder()">
+      <ion-icon item-start>
+        <img src="assets/imgs/order_default.png">
+      </ion-icon>
+      <h2>New Order</h2>
+    </button>>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+    <!-- <button ion-item (click)="goToDistributeOrder()">
+      <ion-icon item-start>
+        <img src="assets/imgs/distribution_pressed.png">
+      </ion-icon>
+      <h2>Distribute Order</h2>
+    </button> -->
+
+    <button ion-item (click)="goToListOrder()">
+      <ion-icon item-start>
+        <img src="assets/imgs/list_default.png">
+      </ion-icon>
+      <h2>List Order</h2>
+    </button>
+
+    <button ion-item (click)="goToTrackingOrder()">
+      <ion-icon item-start>
+        <img src="assets/imgs/tracking_default.png">
+      </ion-icon>
+      <h2>Tracking Order</h2>
+    </button>
+
+    <ion-item>
+      <button ion-item (click)="logout()">
+      <ion-icon item-start>
+        <img src="assets/imgs/logout_pressed.png">
+      </ion-icon>
+      <h2>Logout</h2>
+    </button>
+    </ion-item>
+
+   
+  </ion-list>
+
 </ion-content>

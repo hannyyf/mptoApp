@@ -63,6 +63,7 @@ export class NewOrderStrukturPage {
     this.orderService.pushItems(this.dataOrder);
     console.log("Cek isi data sebelum postData ke page selanjutnya", this.dataOrder)
     this.navCtrl.push(NewOrderKeteranganPage);
+    this.navCtrl.setRoot(NewOrderKeteranganPage);
   } else {
     console.log("LENGKAPIN DATA DULU");
     let alert = this.alertCtrl.create({

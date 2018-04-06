@@ -58,6 +58,7 @@ export class NewOrderAlamatPage {
     this.orderService.pushItems(this.dataOrder);
     console.log("Cek isi data sebelum postData ke page selanjutnya", this.dataOrder)
     this.navCtrl.push(NewOrderStrukturPage);
+    this.navCtrl.setRoot(NewOrderStrukturPage);
   }else {
     console.log("LENGKAPIN DATA DULU");
     let alert = this.alertCtrl.create({

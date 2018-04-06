@@ -90,6 +90,7 @@ export class DistributeOrderInputPage {
       localStorage.setItem('dataOrder', JSON.stringify(this.responseData));         
       this.toastBerhasil();
       this.navCtrl.push(DistributeOrderPage);
+      this.navCtrl.setRoot(DistributeOrderPage);
     
     });
 

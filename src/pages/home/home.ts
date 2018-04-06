@@ -1,14 +1,85 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController,App,AlertController  } from 'ionic-angular';
+import { NewOrderPage } from '../new-order/new-order';
+import { DistributeOrderPage } from '../distribute-order/distribute-order';
+import { ListOrderPage } from '../list-order/list-order';
+import { TrackingOrderPage } from '../tracking-order/tracking-order';
+import { AuthServiceProvider } from '../../providers/auth-service/auth-service'; 
+import { LoginPage } from '../login/login';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
+
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  userDetails : any;
+  responseData: any;
 
+  userPostData = {"user_id":"","token":""};
+
+  constructor(public navCtrl: NavController, public app:App,public authService:AuthServiceProvider,public alertCtrl: AlertController) {
+    const data = JSON.parse(localStorage.getItem('userData'));
+    this.userDetails = data.userData;
+    this.userPostData.user_id = this.userDetails.user_id;
+    this.userPostData.token = this.userDetails.token;
+  
+    // this.userPostData.user_id = this.userDetails.user_id;
+    // this.userPostData.token = this.userDetails.token;   
+  
+  }
+  
+  backToWelcome(){
+     this.navCtrl.push(LoginPage);
+     this.navCtrl.setRoot(LoginPage);
+  }
+  
+  logout(){
+
+    let confirm = this.alertCtrl.create({
+      title: 'Konfirmasi Keluar Aplikasi',
+      message: 'Apakah anda mau keluar dari aplikasi ini?',
+      buttons: [
+        {
+          text: 'Tidak',
+          handler: () => {
+            console.log('Disagree clicked');
+          }
+        },
+        {
+          text: 'Iya',
+          handler: () => {
+            localStorage.clear();
+            setTimeout(() => this.backToWelcome(), 1000);
+          }
+        }
+      ]
+    });
+    confirm.present();
+  }
+
+  goToNewOrder()
+  {
+    this.navCtrl.push(NewOrderPage);
+    this.navCtrl.setRoot(NewOrderPage);
+  }
+
+  // goToDistributeOrder()
+  // {
+  //   this.navCtrl.push(DistributeOrderPage);
+  // }
+
+  goToListOrder()
+  {
+    this.navCtrl.push(ListOrderPage);
+    this.navCtrl.setRoot(ListOrderPage);
+  }
+
+  goToTrackingOrder()
+  {
+    this.navCtrl.push(TrackingOrderPage);
+    this.navCtrl.setRoot(TrackingOrderPage);
   }
 
 }

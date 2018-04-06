@@ -47,7 +47,6 @@ export class NewOrderKeteranganPage {
   }
   sendDataToServer()
   {
-    // this.navCtrl.push(NewOrderStrukturPage);
     this.insertToObject();
     this.orderService.pushItems(this.dataOrder);
     console.log("Cek isi data sebelum postData ke SERVEEER", this.dataOrder)

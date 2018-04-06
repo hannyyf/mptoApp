@@ -10,6 +10,7 @@ import { NewOrderPage } from '../pages/new-order/new-order';
 import { ContohPage } from '../pages/contoh/contoh';
 import { DistributeOrderPage } from '../pages/distribute-order/distribute-order';
 import { ListOrderPage } from '../pages/list-order/list-order';
+import { TrackingOrderPage } from '../pages/tracking-order/tracking-order';
 
 
 @Component({
@@ -30,9 +31,10 @@ export class MyApp {
       { title: 'Home', component: HomePage },
       { title: 'List', component: ListPage },
       { title: 'New Order', component: NewOrderPage },
-      { title: 'Contoh', component: ContohPage },
+      // { title: 'Contoh', component: ContohPage },
       { title: 'Distribute Order', component: DistributeOrderPage },
-      { title: 'List Order', component: ListOrderPage }
+      { title: 'List Order', component: ListOrderPage },
+      { title: 'Tracking Order', component: TrackingOrderPage }
     ];
 
   }

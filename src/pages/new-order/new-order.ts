@@ -52,6 +52,7 @@ export class NewOrderPage {
       console.log("Cek isi data sebelum postData ke server", this.order)
       this.orderService.pushItems(this.order);
       this.navCtrl.push(NewOrderAlamatPage, this.order);
+      this.navCtrl.setRoot(NewOrderAlamatPage);
     }else {
       console.log("LENGKAPIN DATA DULU");
       let alert = this.alertCtrl.create({

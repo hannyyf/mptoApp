@@ -18,6 +18,9 @@ import { DistributeOrderPage } from'../pages/distribute-order/distribute-order';
 import { DistributeOrderInputPage } from '../pages/distribute-order-input/distribute-order-input';
 import { ListOrderPage } from '../pages/list-order/list-order';
 import { ListOrderDetailPage } from '../pages/list-order-detail/list-order-detail';
+import { TrackingOrderPage } from '../pages/tracking-order/tracking-order';
+import { TrackingOrderResultPage } from '../pages/tracking-order-result/tracking-order-result';
+import { TrackingOrderDetailPage } from '../pages/tracking-order-detail/tracking-order-detail';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -63,7 +66,10 @@ export class MyErrorHandler implements ErrorHandler {
     DistributeOrderPage,
     DistributeOrderInputPage,
     ListOrderPage,
-    ListOrderDetailPage
+    ListOrderDetailPage,
+    TrackingOrderPage,
+    TrackingOrderResultPage,
+    TrackingOrderDetailPage
   ],
   imports: [
     BrowserModule,
@@ -85,7 +91,10 @@ export class MyErrorHandler implements ErrorHandler {
     DistributeOrderPage,
     DistributeOrderInputPage,
     ListOrderPage,
-    ListOrderDetailPage
+    ListOrderDetailPage,
+    TrackingOrderPage,
+    TrackingOrderResultPage,
+    TrackingOrderDetailPage
   ],
   providers: [
     StatusBar,
