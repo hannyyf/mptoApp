@@ -4,7 +4,7 @@ import { DataOrder } from '../../models/order-model'
 import { OrderServiceProvider } from '../../providers/order-service/order-service'
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { HomePage } from '../home/home';
-// import { DistributeOrderInputPage } from '../distribute-order-input/distribute-order-input';
+import { DistributeOrderInputPage } from '../distribute-order-input/distribute-order-input';
 
 /**
  * Generated class for the DistributeOrderPage page.
@@ -45,7 +45,7 @@ export class DistributeOrderPage {
 
     detail(id)
     {
-      // this.navCtrl.push(DistributeOrderInputPage,{param: id});
+      this.navCtrl.push(DistributeOrderInputPage,{param: id});
       console.log("cek data sebelum dikirim ke menu", id);
     }
 
