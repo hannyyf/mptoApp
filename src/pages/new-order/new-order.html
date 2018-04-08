@@ -31,6 +31,11 @@
         </ion-item>
 
         <ion-item>
+          <ion-label floating>NIK</ion-label>
+          <ion-input type="number"  [(ngModel)]="order.nik" formControlName="nik" ></ion-input>
+        </ion-item>
+
+        <ion-item>
           <ion-label>Jenis Kelamin</ion-label>
           <ion-select [(ngModel)]="order.jenisKelamin" formControlName="jk">
             <ion-option value="L">Laki-Laki</ion-option>
@@ -49,14 +54,14 @@
 
         <ion-item>
           <ion-label floating>No Handphone</ion-label>
-          <ion-input type="number"  [(ngModel)]="order.noHp1" formControlName="nohp"></ion-input>
+          <ion-input type="number"  [(ngModel)]="order.noHp1" formControlName="nohp" ></ion-input>
         </ion-item>
 
         <ion-item>
           <ion-label floating>No Handphone Lain</ion-label>
           <ion-input type="number" [(ngModel)]="order.noHp2" formControlName="nohp2"></ion-input>
         </ion-item>
-
+ 
       <button ion-button block (click)="goToNewOrderAlamat()">Halaman Berikutnya</button>
       <button ion-button block (click)="goToHome()">Kembali ke Menu</button>
   

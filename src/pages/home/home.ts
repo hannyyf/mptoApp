@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController,App,AlertController  } from 'ionic-angular';
+import { NavController,App,AlertController, MenuController  } from 'ionic-angular';
 import { NewOrderPage } from '../new-order/new-order';
 import { DistributeOrderPage } from '../distribute-order/distribute-order';
 import { ListOrderPage } from '../list-order/list-order';
@@ -19,15 +19,44 @@ export class HomePage {
 
   userPostData = {"user_id":"","token":""};
 
-  constructor(public navCtrl: NavController, public app:App,public authService:AuthServiceProvider,public alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController, public app:App,
+    public authService:AuthServiceProvider,
+    public alertCtrl: AlertController,
+    public menuCtrl: MenuController ) {
     const data = JSON.parse(localStorage.getItem('userData'));
     this.userDetails = data.userData;
     this.userPostData.user_id = this.userDetails.user_id;
     this.userPostData.token = this.userDetails.token;
+
+    if(this.userDetails.jabatan == 4){
+      this.activeMenuCs();
+    }if(this.userDetails.jabatan == 3){
+      this.activeMenuCoc();
+    }if(this.userDetails.jabatan == 1){
+      this.activeMenuCsh();
+    }
   
     // this.userPostData.user_id = this.userDetails.user_id;
     // this.userPostData.token = this.userDetails.token;   
   
+  }
+
+  activeMenuCs() {
+    this.menuCtrl.enable(true, 'cs');
+    this.menuCtrl.enable(false, 'coc');
+    this.menuCtrl.enable(false, 'csh');
+  }
+
+  activeMenuCoc() {
+    this.menuCtrl.enable(true, 'coc');
+    this.menuCtrl.enable(false, 'cs');
+    this.menuCtrl.enable(false, 'csh');
+  }
+
+  activeMenuCsh() {
+    this.menuCtrl.enable(true, 'csh');
+    this.menuCtrl.enable(false, 'cs');
+    this.menuCtrl.enable(false, 'coc');
   }
   
   backToWelcome(){

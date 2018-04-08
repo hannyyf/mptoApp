@@ -37,6 +37,7 @@ export class NewOrderPage {
       this.formCust = formBuilder.group({
         nama: ['', Validators.compose([Validators.maxLength(50), Validators.pattern('[a-zA-Z ]*'), Validators.required])],
         pob: ['',Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z ]*'), Validators.required])],
+        nik: ['',Validators.compose([Validators.maxLength(16), Validators.required])],
         dob: ['',Validators.required],
         jk: ['',Validators.required],
         sp: ['',Validators.required],

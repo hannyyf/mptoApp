@@ -7,10 +7,11 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
 import { NewOrderPage } from '../pages/new-order/new-order';
-import { ContohPage } from '../pages/contoh/contoh';
 import { DistributeOrderPage } from '../pages/distribute-order/distribute-order';
 import { ListOrderPage } from '../pages/list-order/list-order';
 import { TrackingOrderPage } from '../pages/tracking-order/tracking-order';
+import { RegisterPage } from '../pages/register/register';
+
 
 
 @Component({
@@ -22,6 +23,8 @@ export class MyApp {
   rootPage: any = LoginPage;
 
   pages: Array<{title: string, component: any}>;
+  pagescs: Array<{title: string, component: any}>;
+  pagescsh: Array<{title: string, component: any}>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
@@ -29,13 +32,29 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage },
       { title: 'New Order', component: NewOrderPage },
-      // { title: 'Contoh', component: ContohPage },
       { title: 'Distribute Order', component: DistributeOrderPage },
       { title: 'List Order', component: ListOrderPage },
       { title: 'Tracking Order', component: TrackingOrderPage }
+
     ];
+
+    this.pagescsh = [
+      { title: 'Home', component: HomePage },
+      { title: 'New Order', component: NewOrderPage },
+      { title: 'Distribute Order', component: DistributeOrderPage },
+      { title: 'List Order', component: ListOrderPage },
+      { title: 'Tracking Order', component: TrackingOrderPage },
+      { title: 'Register User', component: RegisterPage }
+    ];
+
+    this.pagescs = [
+      { title: 'Home', component: HomePage },
+      { title: 'New Order', component: NewOrderPage },
+      { title: 'List Order', component: ListOrderPage },
+      { title: 'Tracking Order', component: TrackingOrderPage }
+
+    ]
 
   }
 

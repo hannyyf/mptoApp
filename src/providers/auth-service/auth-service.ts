@@ -5,7 +5,7 @@ import 'rxjs/add/operator/map';
 
 
 let apiUrl = 'http://localhost/mpto/api/';
-// let apiUrl = 'http://www.order-is.xyz/php/api/index.php/';
+// let apiUrl = 'http://www.order-is.xyz/index.php/';
 
 @Injectable()
 export class AuthServiceProvider {

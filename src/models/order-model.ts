@@ -4,6 +4,7 @@ export class DataOrder {
     idOrder?: any;
     namaCust?: string;
     tempatLahir?: string;
+    nik?: string;
     tanggalLahir?: DateTime;
     jenisKelamin?: string;
     statusPernikahan?: string;

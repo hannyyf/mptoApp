@@ -9,7 +9,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
-import { ContohPage } from '../pages/contoh/contoh';
+import { RegisterPage } from '../pages/register/register';
 import { NewOrderPage } from '../pages/new-order/new-order';
 import { NewOrderAlamatPage } from '../pages/new-order-alamat/new-order-alamat';
 import { NewOrderStrukturPage } from '../pages/new-order-struktur/new-order-struktur';
@@ -58,11 +58,11 @@ export class MyErrorHandler implements ErrorHandler {
     HomePage,
     ListPage,
     LoginPage,
+    RegisterPage,
     NewOrderPage,
     NewOrderAlamatPage,
     NewOrderStrukturPage,
     NewOrderKeteranganPage,
-    ContohPage,
     DistributeOrderPage,
     DistributeOrderInputPage,
     ListOrderPage,
@@ -83,11 +83,11 @@ export class MyErrorHandler implements ErrorHandler {
     HomePage,
     ListPage,
     LoginPage,
+    RegisterPage,
     NewOrderPage,
     NewOrderAlamatPage,
     NewOrderStrukturPage,
     NewOrderKeteranganPage,
-    ContohPage,
     DistributeOrderPage,
     DistributeOrderInputPage,
     ListOrderPage,

@@ -28,7 +28,21 @@ export class LoginPage {
   }
 
     login(){
-      this.authService.postData(this.userData,'login').then((result) => {
+
+      if(this.userData.username == "" && this.userData.password == ""){
+        let alert = this.alertCtrl.create({
+          subTitle: 'Username dan password masih kosong',
+          buttons: ['OK']
+        });
+        alert.present();
+      }else if(this.userData.username == "" || this.userData.password == ""){
+        let alert = this.alertCtrl.create({
+          subTitle: 'Username / password masih kosong',
+          buttons: ['OK']
+        });
+        alert.present();
+      }else{
+        this.authService.postData(this.userData,'login').then((result) => {
         this.responseData = result;
         if(this.responseData.userData){
         console.log(this.responseData);
@@ -46,3 +60,4 @@ export class LoginPage {
       });
     }
   }
+}
