@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { DataOrder } from '../../models/order-model'
 import { OrderServiceProvider } from '../../providers/order-service/order-service'
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
@@ -13,7 +13,6 @@ import { DistributeOrderInputPage } from '../distribute-order-input/distribute-o
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-distribute-order',
   templateUrl: 'distribute-order.html',
@@ -63,7 +62,8 @@ export class DistributeOrderPage {
 
     getDataDistribute()
     {
-      let url='http://localhost/mpto/page/read_dataorder.php';
+      // let url='http://localhost/mpto/page/read_dataorder.php';
+      let url='http://192.168.43.35/mpto/page/read_dataorder.php';
       // let url='http://www.order-is.xyz/php/page/read_dataorder.php';
       let serverResponse : Promise<any>;
       serverResponse = this.network.callServer(url);

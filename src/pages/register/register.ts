@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams,ToastController, LoadingController  } from 'ionic-angular';
+import { NavController, NavParams,ToastController, LoadingController  } from 'ionic-angular';
 import {LoginPage} from '../login/login';
 import {AuthServiceProvider} from '../../providers/auth-service/auth-service';
 
@@ -10,7 +10,6 @@ import {AuthServiceProvider} from '../../providers/auth-service/auth-service';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-register',
   templateUrl: 'register.html',
@@ -86,18 +85,10 @@ toastGagal(){
     toast.present();
 }
 
-// getJabatan()
-//   {   
-//     this.authService.getData('getJabatan').then((result)=>{
-//     this.listJabatan = result;
-//     localStorage.setItem('listJabatan', JSON.stringify(this.listJabatan));  
-//     console.log("cek hasil listJabatan", this.listJabatan);    
-//     });
-//   }
-
 getJabatan()
   {
-    let url='http://localhost/mpto/page/read_jabatan.php';
+    // let url='http://localhost/mpto/page/read_jabatan.php';
+    let url='http://192.168.43.35/mpto/page/read_jabatan.php';
     // let url='http://www.order-is.xyz/php/page/read_motor.php';
     let serverResponse : Promise<any>;
     serverResponse = this.authService.callServer(url);

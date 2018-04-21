@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController} from 'ionic-angular';
+import { NavController, NavParams, AlertController} from 'ionic-angular';
 import { NewOrderPage } from '../new-order/new-order';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NewOrderKeteranganPage } from '../new-order-keterangan/new-order-keterangan';
@@ -15,7 +15,6 @@ import { NewOrderAlamatPage } from '../new-order-alamat/new-order-alamat';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-new-order-struktur',
   templateUrl: 'new-order-struktur.html',
@@ -83,7 +82,8 @@ export class NewOrderStrukturPage {
 
   getDataDealer()
   {
-    let url='http://localhost/mpto/page/read_dealer.php';
+    // let url='http://localhost/mpto/page/read_dealer.php';
+    let url='http://192.168.43.35/mpto/page/read_dealer.php';
     // let url='http://www.order-is.xyz/php/page/read_dealer.php';
     let serverResponse : Promise<any>;
     serverResponse = this.network.callServer(url);
@@ -98,7 +98,8 @@ export class NewOrderStrukturPage {
 
   getDataMotor()
   {
-    let url='http://localhost/mpto/page/read_motor.php';
+    // let url='http://localhost/mpto/page/read_motor.php';
+    let url='http://192.168.43.35/mpto/page/read_motor.php';
     // let url='http://www.order-is.xyz/php/page/read_motor.php';
     let serverResponse : Promise<any>;
     serverResponse = this.network.callServer(url);

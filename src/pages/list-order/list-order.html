@@ -27,11 +27,11 @@
     </ion-item>
     <ion-item>
         <ion-label stacked>Dari Tanggal</ion-label>
-        <ion-datetime displayFormat="YYYY - MMM - DD" [(ngModel)]="getDataListOrder.dtfrom" formControlName="dtfrom" [class.invalid]="!searchListData.controls.dtfrom.valid"></ion-datetime>
+        <ion-datetime displayFormat="DD - MMM - YYYY" [(ngModel)]="getDataListOrder.dtfrom" formControlName="dtfrom" [class.invalid]="!searchListData.controls.dtfrom.valid"></ion-datetime>
     </ion-item>
     <ion-item>
         <ion-label stacked>Sampai Tanggal</ion-label>
-        <ion-datetime displayFormat="YYYY - MMM - DD" [(ngModel)]="getDataListOrder.dtthru" formControlName="dtthru" [class.invalid]="!searchListData.controls.dtthru.valid"></ion-datetime>
+        <ion-datetime displayFormat="DD - MMM - YYYY" [(ngModel)]="getDataListOrder.dtthru" formControlName="dtthru" [class.invalid]="!searchListData.controls.dtthru.valid"></ion-datetime>
     </ion-item>
       <button ion-button block (click)="getListOrder()">List Order</button>
       <button ion-button block (click)="backToMenu()">Kembali ke Menu</button>

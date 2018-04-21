@@ -7,6 +7,9 @@
 <ion-header>
 
   <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
     <ion-title>Register User</ion-title>
   </ion-navbar>
 
@@ -47,7 +50,6 @@
             </ion-select>
           </ion-item>
         <button ion-button full color="success" (click)="signup()">Sign up</button>
-        <a href="#" (click)="login()">Login Page</a>
       </ion-list>
     </ion-card-content>
   </ion-card>

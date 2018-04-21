@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {  NavController, NavParams } from 'ionic-angular';
 import { ListOrderPage } from '../list-order/list-order';
 
 /**
@@ -9,7 +9,6 @@ import { ListOrderPage } from '../list-order/list-order';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-list-order-detail',
   templateUrl: 'list-order-detail.html',

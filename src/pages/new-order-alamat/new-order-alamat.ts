@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { NavController, NavParams, AlertController } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NewOrderPage } from '../new-order/new-order';
 // import { NewOrderStrukturPage } from '../new-order-struktur/new-order-struktur';
@@ -14,7 +14,6 @@ import { NewOrderStrukturPage } from '../new-order-struktur/new-order-struktur';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-new-order-alamat',
   templateUrl: 'new-order-alamat.html',

@@ -34,10 +34,7 @@ export class HomePage {
       this.activeMenuCoc();
     }if(this.userDetails.jabatan == 1){
       this.activeMenuCsh();
-    }
-  
-    // this.userPostData.user_id = this.userDetails.user_id;
-    // this.userPostData.token = this.userDetails.token;   
+    }  
   
   }
 
@@ -94,10 +91,6 @@ export class HomePage {
     this.navCtrl.setRoot(NewOrderPage);
   }
 
-  // goToDistributeOrder()
-  // {
-  //   this.navCtrl.push(DistributeOrderPage);
-  // }
 
   goToListOrder()
   {

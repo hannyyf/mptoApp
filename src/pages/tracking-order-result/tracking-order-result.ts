@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { TrackingOrderPage } from '../tracking-order/tracking-order';
 import { TrackingOrderDetailPage } from '../tracking-order-detail/tracking-order-detail';
 
@@ -10,7 +10,7 @@ import { TrackingOrderDetailPage } from '../tracking-order-detail/tracking-order
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+
 @Component({
   selector: 'page-tracking-order-result',
   templateUrl: 'tracking-order-result.html',

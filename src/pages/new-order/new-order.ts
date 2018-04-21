@@ -1,6 +1,6 @@
 import { Component} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { IonicPage,NavController, NavParams, AlertController} from 'ionic-angular';
+import { NavController, NavParams, AlertController} from 'ionic-angular';
 import { NewOrderAlamatPage } from '../new-order-alamat/new-order-alamat';
 import { HomePage } from '../home/home';
 import { DataOrder } from '../../models/order-model'
@@ -13,7 +13,6 @@ import { OrderServiceProvider } from '../../providers/order-service/order-servic
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-new-order',
   templateUrl: 'new-order.html',
@@ -23,7 +22,6 @@ export class NewOrderPage {
   order: DataOrder;
   formCust: FormGroup;
   submitAttempt: boolean = false;
-  // dataOrder: DataOrder[];
 
   constructor(
     public navCtrl: NavController, 

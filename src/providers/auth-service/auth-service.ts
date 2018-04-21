@@ -1,10 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import {Http, Headers} from '@angular/http';
+import { Http, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 
-let apiUrl = 'http://localhost/mpto/api/';
+// let apiUrl = 'http://localhost/mpto/api/';
+let apiUrl = 'http://192.168.43.35/mpto/api/';
 // let apiUrl = 'http://www.order-is.xyz/index.php/';
 
 @Injectable()

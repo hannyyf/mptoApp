@@ -11,7 +11,6 @@ import { HomePage } from '../home/home';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-distribute-order-input',
   templateUrl: 'distribute-order-input.html',
@@ -44,7 +43,8 @@ export class DistributeOrderInputPage {
 
   getDataFv()
   {
-    let url='http://localhost/mpto/page/read_fv.php';
+    // let url='http://localhost/mpto/page/read_fv.php';
+    let url='http://192.168.43.35/mpto/page/read_fv.php';
     // let url='http://www.order-is.xyz/php/page/read_fv.php';
     let serverResponse : Promise<any>;
     serverResponse = this.network.callServer(url);

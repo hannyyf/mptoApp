@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { DataOrder } from '../../models/order-model';
 import { HomePage } from '../home/home';
@@ -13,7 +13,6 @@ import { ListOrderDetailPage } from '../list-order-detail/list-order-detail';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-list-order',
   templateUrl: 'list-order.html',
@@ -53,7 +52,8 @@ export class ListOrderPage {
 
   getDataDealer()
   {
-    let url='http://localhost/mpto/page/read_dealer.php';
+    // let url='http://localhost/mpto/page/read_dealer.php';
+    let url='http://192.168.43.35/mpto/page/read_dealer.php';
     // let url='http://www.order-is.xyz/php/page/read_dealer.php';
     let serverResponse : Promise<any>;
     serverResponse = this.network.callServer(url);

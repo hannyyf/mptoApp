@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
+import { NavController, NavParams, LoadingController } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import {AuthServiceProvider} from '../../providers/auth-service/auth-service'
 import { TrackingOrderResultPage } from '../tracking-order-result/tracking-order-result';
@@ -11,7 +11,6 @@ import { TrackingOrderResultPage } from '../tracking-order-result/tracking-order
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-tracking-order',
   templateUrl: 'tracking-order.html',

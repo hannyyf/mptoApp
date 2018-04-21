@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+import { NavController, NavParams, ToastController } from 'ionic-angular';
 import { NewOrderPage } from '../new-order/new-order';
 import { NewOrderStrukturPage } from '../new-order-struktur/new-order-struktur';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
@@ -14,7 +14,6 @@ import { HomePage } from '../home/home';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-new-order-keterangan',
   templateUrl: 'new-order-keterangan.html',
@@ -45,6 +44,7 @@ export class NewOrderKeteranganPage {
     this.getDataCa();
     this.getDataCs();
   }
+  
   sendDataToServer()
   {
     this.insertToObject();
@@ -97,7 +97,8 @@ export class NewOrderKeteranganPage {
 
   getDataAo()
   {
-    let url='http://localhost/mpto/page/read_ao.php';
+    // let url='http://localhost/mpto/page/read_ao.php';
+    let url='http://192.168.43.35/mpto/page/read_ao.php';
     // let url='http://www.order-is.xyz/php/page/read_ao.php';
     let serverResponse : Promise<any>;
     serverResponse = this.network.callServer(url);
@@ -113,7 +114,8 @@ export class NewOrderKeteranganPage {
 
   getDataCa()
   {
-    let url='http://localhost/mpto/page/read_ca.php';
+    // let url='http://localhost/mpto/page/read_ca.php';
+    let url='http://192.168.43.35/mpto/page/read_ca.php';
     // let url='http://www.order-is.xyz/php/page/read_ca.php';
     let serverResponse : Promise<any>;
     serverResponse = this.network.callServer(url);
@@ -131,7 +133,8 @@ export class NewOrderKeteranganPage {
 
   getDataCs()
   {
-    let url='http://localhost/mpto/page/read_cs.php';
+    // let url='http://localhost/mpto/page/read_cs.php';
+    let url='http://192.168.43.35/mpto/page/read_cs.php';
     // let url='http://www.order-is.xyz/php/page/read_cs.php';
     let serverResponse : Promise<any>;
     serverResponse = this.network.callServer(url);
